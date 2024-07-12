@@ -5,6 +5,12 @@ interface Props {
   email ?:string;
 }
 
+enum BoysLuck {
+  Tall=" Lucky you",
+  Medium = "Nice try",
+  Short = "Eeew",
+
+}
 export const Person:FC<Props> = ({name,age,email}: Props) => {
 
   const [country, setCountry] =useState<string | null>("")
@@ -20,6 +26,7 @@ export const Person:FC<Props> = ({name,age,email}: Props) => {
       <h1>{email}</h1>
       <input placeholder="Write down your country..." onChange={handleChange}/>
       {country}
+      {BoysLuck.Tall}
     </div>
   );
 }
