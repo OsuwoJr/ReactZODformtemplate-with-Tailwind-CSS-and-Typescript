@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 interface Props {
   name ?: string;
   age ?: number;
@@ -6,6 +6,8 @@ interface Props {
 }
 
 export const Person:FC<Props> = ({name,age,email}: Props) => {
+
+  const [country, setCountry] =useState<string | null>("")
   return (
     <div>
       <h1>{name}</h1>
