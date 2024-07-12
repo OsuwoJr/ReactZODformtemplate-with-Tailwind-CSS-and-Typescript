@@ -1,17 +1,20 @@
 import { FC, ChangeEvent, useState } from "react";
-interface Props {
-  name ?: string;
-  age ?: number;
-  email ?:string;
-}
 
-enum BoysLuck {
+export enum BoysLuck {
   Tall=" Lucky you",
   Medium = "Nice try",
   Short = "Eeew",
 
 }
-export const Person:FC<Props> = ({name,age,email}: Props) => {
+
+interface Props {
+  name ?: string;
+  age ?: number;
+  email ?:string;
+  boysLuck:BoysLuck;
+}
+
+export const Person:FC<Props> = ({name,age,email,boysLuck}: Props) => {
 
   const [country, setCountry] =useState<string | null>("")
 
@@ -26,7 +29,8 @@ export const Person:FC<Props> = ({name,age,email}: Props) => {
       <h1>{email}</h1>
       <input placeholder="Write down your country..." onChange={handleChange}/>
       {country}
-      {BoysLuck.Tall}
+      {BoysLuck.Short}
+      {boysLuck}
     </div>
   );
 }

@@ -1,12 +1,12 @@
 //import React from 'react'
 import './App.css'
-import { Person } from './components/Person'
+import { Person,BoysLuck } from './components/Person'
 
 const App = () => {
  
   return (
     <div className='App'>
-      <Person name="Osuwo" age={20} email="osuwoodongo@gmail.com"/>
+      <Person name="Osuwo" age={20} email="osuwoodongo@gmail.com" boysLuck={BoysLuck.Short}/>
     </div>
   )
  
