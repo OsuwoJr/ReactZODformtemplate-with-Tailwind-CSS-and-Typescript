@@ -5,8 +5,8 @@ import { Person } from './components/Person'
 const App = () => {
  
   return (
-    <div>
-      <Person/>
+    <div className='App'>
+      <Person name="Osuwo" age={20} email="osuwoodongo@gmail.com"/>
     </div>
   )
  
