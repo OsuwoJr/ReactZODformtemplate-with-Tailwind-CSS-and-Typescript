@@ -1,8 +1,8 @@
 
 interface Props {
-  name: string;
-  age: number;
-  email:string;
+  name ?: string;
+  age ?: number;
+  email ?:string;
 }
 
 export const Person = (props: Props) => {
