@@ -1,11 +1,11 @@
-
+import { FC } from "react";
 interface Props {
   name ?: string;
   age ?: number;
   email ?:string;
 }
 
-export const Person = ({name,age,email}: Props) => {
+export const Person:FC<Props> = ({name,age,email}: Props) => {
   return (
     <div>
       <h1>{name}</h1>
