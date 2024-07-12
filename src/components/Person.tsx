@@ -18,6 +18,9 @@ export const Person:FC<Props> = ({name,age,email,boysLuck}: Props) => {
 
   const [country, setCountry] =useState<string | null>("")
 
+  type NameType = "Pedro" | "Jack" | "Manuel"
+  const nameForType: NameType ="Manuel"
+
   const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
     setCountry(event.target.value)
   }
@@ -31,6 +34,7 @@ export const Person:FC<Props> = ({name,age,email,boysLuck}: Props) => {
       {country}
       {BoysLuck.Short}
       {boysLuck}
+      {nameForType}
     </div>
   );
 }
