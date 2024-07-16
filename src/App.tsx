@@ -1,12 +1,13 @@
 import "./App.css"
+import "./index.css"
 export interface IAppProps {
 }
 
 function App() {
   return (
     <div className="App">
-      <form>
-        <label>
+      <form >
+        <label className="text-red-900">
           First Name:
         </label>
         <input type="text" placeholder="first name"/>
