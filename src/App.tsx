@@ -23,35 +23,44 @@ function App() {
     message:"Passwords do not match",
     path:["confirmPassword"],
   });
-  const {} = useForm({resolver:zodResolver(schema)})
+  const {
+    register, 
+    handleSubmit,
+  } = useForm<FormData>({resolver:zodResolver(schema)})
+
+  const submitData = (data:FormData) => {
+    console.log("IT WORKED", data)
+  }
 
   return (
     <div className="flex items-center justify-center">
-      <form className="flex flex-col w-[200px] min-h-screen">
+      <form className="flex flex-col w-[200px] min-h-screen" onSubmit={handleSubmit(submitData)}>
         <label>
           First Name:
         </label>
-        <input type="text" placeholder="first name"/>
+        <input type="text" placeholder="first name" {...register("firstName")}/>
         <label>
           Last Name:
         </label>
-        <input type="text" placeholder="Last name"/>
+        <input type="text" placeholder="Last name" {...register("lastName")}/>
         <label>
           Email:
         </label>
-        <input type="email" placeholder="email"/>
+        <input type="email" placeholder="email" {...register("email")}/>
         <label>
           Age
         </label>
-        <input type="number" placeholder="age"/>
+        <input type="number" placeholder="age" {...register("age", {valueAsNumber: true})}/>
         <label>
           Password
         </label>
-        <input type="password" placeholder="Password"/>
+        <input type="password" placeholder="Password" {...register("password")}/>
         <label>
           Confirm Password
         </label>
-        <input type="password" placeholder="Confirm Password"/>
+        <input type="password" placeholder="Confirm Password" {...register("confirmPassword")}/>
+
+        <input type='submit'/>
       </form>
       
     </div>
