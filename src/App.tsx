@@ -1,5 +1,6 @@
-import {z,ZodType} from 'zod'
-import {useForm}from 'react-hook-form'
+import {z,ZodType} from 'zod';
+import {useForm}from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod'
 type FormData = {
   firstName:string;
   lastName:string;
@@ -22,7 +23,7 @@ function App() {
     message:"Passwords do not match",
     path:["confirmPassword"],
   });
-  
+  const {} = useForm({resolver:zodResolver(schema)})
 
   return (
     <div className="flex items-center justify-center">
