@@ -1,5 +1,4 @@
-import "./App.css"
-import "./index.css"
+
 export interface IAppProps {
 }
 
@@ -7,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <form >
+        <div className="tex-purple-300">Hello</div>
         <label className="text-red-900">
           First Name:
         </label>
