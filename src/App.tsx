@@ -4,10 +4,9 @@ export interface IAppProps {
 
 function App() {
   return (
-    <div className="App">
-      <form >
-        <div className="tex-purple-300">Hello</div>
-        <label className="text-red-900">
+    <div className="flex items-center justify-center">
+      <form className="flex flex-col w-[200px] min-h-screen">
+        <label>
           First Name:
         </label>
         <input type="text" placeholder="first name"/>
